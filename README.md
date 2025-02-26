@@ -44,6 +44,8 @@ To run volumes on windows: ´docker run -dp 5000:5000 -w //app -v "%cd%://app" <
 #### Flask smorest
 A blueprint is to divide an api into multiple segments
 
+- To open the documentation we need to open ´localhost:5000/swagger-ui´
+
 
 ### SQLAlchemy
 We add sqlalchemy and flask-sqlalchemy to the requirements, and pip install them in our local environment
@@ -51,6 +53,9 @@ We add sqlalchemy and flask-sqlalchemy to the requirements, and pip install them
 I was getting a ModuleNotFound error for Flask-SQLAlchemy that didn't allow me to run the api, so I deleted all previous images and created a new one with the requirements, and only then it worked.
 
 ´docker build -t < image name > .´
+
+In this first instance, we are using SQLite. Will change to Postgres later on.
+
 
 
 

@@ -5,4 +5,4 @@ class StoreModel(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(80), unique=True, nullable=False)
-    items = db.relationship("ItemModel", back_populates="store", lazy="dynamic")
+    items = db.relationship("ItemModel", back_populates="store", lazy="dynamic", cascade="all, delete") # if we delete a store, all items in it will get deleted as well
