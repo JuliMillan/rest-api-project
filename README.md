@@ -38,7 +38,7 @@ A docker image is a snapshop of source code, libraries, dependencies, tools and 
  - Only for local development. When deploying, you don't use volumes. 
 
 
-To run volumes on windows: ´docker run -dp 5000:5000 -w //app -v "%cd%://app" flask-smorest-api´
+To run volumes on windows: ´docker run -dp 5000:5000 -w //app -v "%cd%://app" < image_name >´
 
 ### Flask
 #### Flask smorest
@@ -47,6 +47,11 @@ A blueprint is to divide an api into multiple segments
 
 ### SQLAlchemy
 We add sqlalchemy and flask-sqlalchemy to the requirements, and pip install them in our local environment
+
+I was getting a ModuleNotFound error for Flask-SQLAlchemy that didn't allow me to run the api, so I deleted all previous images and created a new one with the requirements, and only then it worked.
+
+´docker build -t < image name > .´
+
 
 
 
