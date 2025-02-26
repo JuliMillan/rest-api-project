@@ -38,22 +38,12 @@ A docker image is a snapshop of source code, libraries, dependencies, tools and 
  - Only for local development. When deploying, you don't use volumes. 
 
 
-To run volumes on windows: ´docker run -dp 5005:5000 -w //app -v "%cd%://app" flask-smorest-api´
+To run volumes on windows: ´docker run -dp 5000:5000 -w //app -v "%cd%://app" flask-smorest-api´
 
 ### Flask
 #### Flask smorest
 A blueprint is to divide an api into multiple segments
 
-### SQLAlchemy
-Using a relational db to store our data
-
-Remove the db file to initialise information storage 
- - SQLAlchemy is an ORM: Object relational mapping
-    Better than simply writing plain SQL code because:
-    - Multi-threading support
-    - Creates tables and columns automatically
-    - Easy to do db migrations
-    - Cleaner and shorter code
 
 
 
