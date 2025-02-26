@@ -57,6 +57,8 @@ I was getting a ModuleNotFound error for Flask-SQLAlchemy that didn't allow me t
 In this first instance, we are using SQLite. Will change to Postgres later on.
 
 
+#### Many to manny relationships
+Each item can have many tags and each tag can have many items.
 
 
 
