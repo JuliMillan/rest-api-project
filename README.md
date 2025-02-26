@@ -45,7 +45,8 @@ To run volumes on windows: ´docker run -dp 5000:5000 -w //app -v "%cd%://app" f
 A blueprint is to divide an api into multiple segments
 
 
-
+### SQLAlchemy
+We add sqlalchemy and flask-sqlalchemy to the requirements, and pip install them in our local environment
 
 
 
