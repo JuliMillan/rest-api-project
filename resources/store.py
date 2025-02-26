@@ -2,7 +2,6 @@ import uuid
 from flask import Flask, request
 from flask.views import MethodView # to create a class where it points to different endpoints
 from flask_smorest import Blueprint, abort
-from db import stores
 
 from schemas import StoreSchema
 
