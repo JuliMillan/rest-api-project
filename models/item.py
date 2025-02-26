@@ -1,12 +1,16 @@
 from db import db
 
-class ItemModel(dn.Model): # mapping between a row in a table to a python class/object
+
+class ItemModel(db.Model):
     __tablename__ = "items"
 
-    id = db.Column(db.Integer, primary_key=True) # will give automatically increasing value to id when we add new items
-    name = db.Column(db.String(80), unique=True, nullable=False)
-    price = db.Column(db.Float(precisio=2), unique=False, nullabe=False)
-    store_id = db.Column(db.Integer, db.ForeignKey("stores.id"), unique=False, nullable=False) # link btw items and stores table in a one(stores.is) to many(items.store_id) manner
-    store = db.relationship("StoreModel", back_populates="items") # will automatically populate the store variable with a StoreModel object whose id matches that of the foreign key
-    
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(80), unique=False, nullable=False)
+    price = db.Column(db.Float(precision=2), unique=False, nullable=False)
 
+    store_id = db.Column(
+        db.Integer, db.ForeignKey("stores.id"), unique=False, nullable=False
+    )
+    store = db.relationship("StoreModel", back_populates="items")
+
+    tags = db.relationship("TagModel", back_populates="items", secondary="items_tags")
