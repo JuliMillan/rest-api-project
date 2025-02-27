@@ -89,6 +89,12 @@ To migrate:
 ### Deployment
 We use Render.com to deploy our API
 
-To run Dockerfile locally: 
+To run Dockerfile locally after modifying it to run with gunicorn: 
 
 `docker run -dp 5000:5000 -w //app -v "%cd%://app" < image_name > sh -c "flask run --host 0.0.0.0"`
+
+To re create docker container:
+`docker compose up --build --force-recreate --no-deps web`
+
+
+
