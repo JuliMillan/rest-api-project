@@ -47,6 +47,14 @@ A blueprint is to divide an api into multiple segments
 
 - To open the documentation we need to open `localhost:5000/swagger-ui`
 
+### Insomnia
+We use Insomnia to test our api
+
+Defining url on Base Environment: 
+
+```
+{"url": "http://127.0.0.1:5000"}
+```
 
 ### SQLAlchemy
 We add sqlalchemy and flask-sqlalchemy to the requirements, and pip install them in our local environment
@@ -77,3 +85,10 @@ To migrate:
  - `flask db init`, then delete the existing db
  - `flask db migrate`
  - `flask db update`
+
+### Deployment
+We use Render.com to deploy our API
+
+To run Dockerfile locally: 
+
+`docker run -dp 5000:5000 -w //app -v "%cd%://app" < image_name > sh -c "flask run --host 0.0.0.0"`
