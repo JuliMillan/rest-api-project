@@ -29,7 +29,8 @@ def create_app(db_url=None):
     migrate = Migrate(app, db)
     api = Api(app)
 
-    app.config["JWT_SECRET_KEY"] = "juli"
+    # Use environment variable when deploying an api
+    app.config["JWT_SECRET_KEY"] = ""
     jwt = JWTManager(app)
 
     # @jwt.additional_claims_loader
