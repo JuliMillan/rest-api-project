@@ -1,6 +1,8 @@
-flask
-flask-smorest
+Flask
+Flask-JWT-Extended
+Flask-Smorest
 Flask-SQLAlchemy
-python-dotenv
+passlib
 marshmallow
-sqlalchemy
+python-dotenv
+gunicorn

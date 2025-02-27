@@ -52,7 +52,7 @@ We add sqlalchemy and flask-sqlalchemy to the requirements, and pip install them
 
 I was getting a ModuleNotFound error for Flask-SQLAlchemy that didn't allow me to run the api, so I deleted all previous images and created a new one with the requirements, and only then it worked.
 
-´docker build -t < image name > .´
+´docker build -t < image name > .´ **Remember to use the dot at the end**
 
 In this first instance, we are using SQLite. Will change to Postgres later on.
 
@@ -61,4 +61,7 @@ In this first instance, we are using SQLite. Will change to Postgres later on.
 Each item can have many tags and each tag can have many items.
 
 
+### User authentication
+#### JWT for access password
+Add new packager to requirements and re build the docker image
 
